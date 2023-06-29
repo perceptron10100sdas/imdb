@@ -10,8 +10,7 @@
   },
   "dependencies": {
     "@bradgarropy/next-link": "^1.1.0",
-    "eslint": "8.43.0",
-    "eslint-config-next": "13.4.7",
+    
     "next": "13.4.7",
     "next-images": "^1.8.5",
     "next-themes": "^0.2.1",
