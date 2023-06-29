@@ -1,11 +1,13 @@
-const API_KEY = process.env.API_KEY;
+export const dynamic = "force-dynamic"; // this is the fix
+
 import Results from "./components/Results";
-const fetch = require('node-fetch');
 
-export default async function Home({searchParams}) {
-  const genre=searchParams.genre|| "fetchTrending";
+const API_KEY = process.env.API_KEY;
 
-  const res=await fetch(
+export default async function Home({ searchParams }) {
+  const genre = searchParams.genre || "fetchTrending";
+
+  const res = await fetch(
     `https://api.themoviedb.org/3/${
       genre === "fetchTopRated" ? "movie/top_rated" : "trending/all/week"
     }?api_key=${API_KEY}&language=en-US&page=1`,
